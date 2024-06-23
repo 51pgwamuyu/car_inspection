@@ -1,0 +1,38 @@
+{
+  "canisters": {
+    "car_inspection_backend": {
+      "build": "npx azle car_inspection_backend",
+      "candid": "src/car_inspection_backend/car_inspection_backend.did",
+      "gzip": true,
+      "main": "src/car_inspection_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/car_inspection_backend/car_inspection_backend.wasm"
+    },
+    "car_inspection_frontend": {
+      "dependencies": [
+        "car_inspection_backend"
+      ],
+      "source": [
+        "src/car_inspection_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "car_inspection_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
