@@ -1,0 +1,1 @@
+{"canister_methods":{"queries":[{"name":"getHistory","composite":false},{"name":"getCarBookingDate","composite":false}],"updates":[{"name":"registerUser"},{"name":"giveComment"},{"name":"giveComplain"},{"name":"askQuestion"},{"name":"rateOurServices"},{"name":"bookInspection"},{"name":"rescheduleCarInspection"}],"callbacks":{}}}

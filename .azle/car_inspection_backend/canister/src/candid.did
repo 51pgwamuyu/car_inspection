@@ -1,0 +1,11 @@
+service: () -> {
+    askQuestion: (record {question:text; email:text}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}});
+    bookInspection: (record {desiredDate:text; username:text; carname:text}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}});
+    getCarBookingDate: (record {username:text; carname:text}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}}) query;
+    getHistory: (record {username:text}) -> (variant {Ok:vec record {model:text; name:text}; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}}) query;
+    giveComment: (record {username:text; comment:text}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}});
+    giveComplain: (record {username:text; complain:text}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}});
+    rateOurServices: (record {username:text; rate:nat64}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}});
+    registerUser: (record {username:text}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}});
+    rescheduleCarInspection: (record {desiredDate:text; username:text; carname:text}) -> (variant {Ok:text; Err:variant {UserAlreadyExist:text; MissingCredentials:text; CarNotScheduled:text; UserMustBeRegistered:text; UserNotFound:text}});
+}
